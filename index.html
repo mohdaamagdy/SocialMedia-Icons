@@ -4,13 +4,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Social Media Sidebar</title>
 
+    <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/e747016902.js"
             crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="style.css">
+    <!-- CSS داخل ملف HTML -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .social-sidebar {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            display: flex;
+            flex-direction: column;
+
+            width: 102px;
+
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .social {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+
+            width: 102px;
+            height: 86px;
+
+            color: white;
+            text-decoration: none;
+
+            overflow: hidden;
+
+            transition: width 0.4s ease;
+        }
+
+        .social i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 102px;
+            min-width: 102px;
+            height: 86px;
+
+            font-size: 36px;
+        }
+
+        .social span {
+            position: absolute;
+            left: 102px;
+
+            font-size: 23px;
+            font-weight: bold;
+            letter-spacing: 1px;
+
+            white-space: nowrap;
+
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .social:hover {
+            width: 288px;
+        }
+
+        .social:hover span {
+            opacity: 1;
+        }
+
+        .facebook {
+            background-color: #4867AA;
+        }
+
+        .twitter {
+            background-color: #3498DB;
+        }
+
+        .instagram {
+            background-color: #DF2868;
+        }
+
+        .linkedin {
+            background-color: #3166AD;
+        }
+
+        .github {
+            background-color: #292929;
+        }
+
+        .youtube {
+            background-color: #FF1010;
+        }
+    </style>
+
 </head>
+
 <body>
 
     <div class="social-sidebar">
@@ -49,3 +154,4 @@
 
 </body>
 </html>
+
